@@ -19,6 +19,7 @@ public class Application {
 		
 		Advisor advisor = new Advisor();
 		advisor.setName("Mr.Richardson Hoca");
+		advisor.setAge(35L);
 		
 		List<Program> programList = new ArrayList<Program>();
 		Program program = createProgram();

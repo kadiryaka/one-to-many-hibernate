@@ -29,6 +29,9 @@ public class Advisor implements Serializable {
 	@Column(name = "U_NAME")
 	private String name;
 	
+	@Column(name = "U_AGE")
+	private Long age;
+	
 	@OneToMany(cascade=CascadeType.ALL)
 	@JoinColumn(name = "ADVISOR_ID", nullable = false)
 	List<Program> programList = new ArrayList<Program>();
@@ -66,6 +69,14 @@ public class Advisor implements Serializable {
 
 	public void setContactList(List<Contact> contactList) {
 		this.contactList = contactList;
+	}
+
+	public Long getAge() {
+		return age;
+	}
+
+	public void setAge(Long age) {
+		this.age = age;
 	}
 	
 }
